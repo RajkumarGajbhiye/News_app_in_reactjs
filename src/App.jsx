@@ -2,7 +2,7 @@
 import './App.css'
 import NavbarComp from './components/NavbarComp'
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,Route
 } from "react-router-dom";
 import Home from './pages/Home';
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-    <Router>
+    <BrowserRouter>
     <NavbarComp/>
       <Routes>
       <Route exact path = "/" element={<Home/>}/>
@@ -26,7 +26,7 @@ function App() {
       <Route  path = "/business" element={<FetchData cat ="business"/>}/>
       </Routes>
       <Footer/>
-    </Router>
+    </BrowserRouter>
 
     </>
   )
