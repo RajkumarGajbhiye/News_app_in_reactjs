@@ -9,8 +9,8 @@ const FetchData = ({ cat }) => {
     setLodder(true);
     const { data } = await axios.get(
       cat
-        ? `https://gnews.io/api/v4/top-headlines?category=${cat}&lang=en&country=in&max=10&apikey=63099393df4cac2a28774e88624c6a3c`
-        : "https://gnews.io/api/v4/top-headlines?lang=en&country=in&max=10&apikey=63099393df4cac2a28774e88624c6a3c"
+        ? `https://gnews.io/api/v4/top-headlines?category=${cat}&lang=en&country=in&max=10&apikey=c7385f00c9c57b315e341769c4bb3ed0`
+        : "https://gnews.io/api/v4/top-headlines?lang=en&country=in&max=10&apikey=c7385f00c9c57b315e341769c4bb3ed0"
     );
     setData(data.articles);
     setLodder(false);
