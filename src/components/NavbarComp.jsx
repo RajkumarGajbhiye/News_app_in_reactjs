@@ -10,7 +10,7 @@ const NavbarComp = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="bg-body-tertiary"
+        className="bg-body-tertiary res"
         bg="dark"
         data-bs-theme="dark"
         fixed="top"

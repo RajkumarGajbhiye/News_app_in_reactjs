@@ -4,14 +4,14 @@ import Spinner from "react-bootstrap/Spinner";
 const FetchData = ({ cat }) => {
   const [data, setData] = useState([]);
   const [loadder, setLodder] = useState(true);
+
   const fechData = async () => {
     setLodder(true);
     const { data } = await axios.get(
       cat
-        ? `https://newsapi.org/v2/top-headlines?country=in&category=${cat}&apiKey=1f803efd37a04c2981dbb3f1f55fc8e2`
-        : "https://newsapi.org/v2/top-headlines?country=in&apiKey=1f803efd37a04c2981dbb3f1f55fc8e2"
+        ? `https://gnews.io/api/v4/top-headlines?category=${cat}&lang=en&country=in&max=10&apikey=63099393df4cac2a28774e88624c6a3c`
+        : "https://gnews.io/api/v4/top-headlines?lang=en&country=in&max=10&apikey=63099393df4cac2a28774e88624c6a3c"
     );
-    console.log(data.articles);
     setData(data.articles);
     setLodder(false);
   };
@@ -33,7 +33,7 @@ const FetchData = ({ cat }) => {
         ) : (
           data.map((items, index) => (
             <div
-              className="container my-2 p-3"
+              className="container my-2 p-3 "
               style={{
                 width: "600px",
                 boxShadow: "2px 2px 10px silver",
@@ -41,10 +41,10 @@ const FetchData = ({ cat }) => {
               }}
               key={index}
             >
-              <h5 className=" my-2">{items.title}</h5>
-              <div className="img-fluid d-flex justify-content-center align-items-center">
+              <h5 className="my-2">{items.title}</h5>
+              <div className=" img-fluid d-flex justify-content-center align-items-center res ">
                 <img
-                  src={items.urlToImage}
+                  src={items.image}
                   alt="Image not found"
                   style={{
                     width: "100%",
@@ -53,7 +53,7 @@ const FetchData = ({ cat }) => {
                   }}
                 />
               </div>
-              <p className=" my-1">{items.content}</p>
+              <p className="my-2 ">{items.content}</p>
               <a href={items.url} target="blank">
                 View More
               </a>

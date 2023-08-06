@@ -2,3 +2,19 @@
   margin:0;
   padding:0
 }
+
+
+
+
+
+  @media only screen and (max-width: 900px){
+    .res{
+      width:100vw;
+      };
+    .bannerRes{
+        width: 100vw;
+        height: auto;
+      };
+    }
+
+  
