@@ -27,15 +27,15 @@ const NavbarComp = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto d-flex gap-3" color="faded" light>
-              <Link to="/">Home</Link>
-              <Link to="/general">General</Link>
-              <Link to="/entertainment">Entertainment</Link>
-              <Link to="/health">Health</Link>
-              <Link to="/science">Science</Link>
-              <Link to="/sports">Sports</Link>
-              <Link to="/technology">Technology</Link>
-              <Link to="business">Business</Link>
+            <Nav className="ms-auto d-flex gap-3" >
+              <Link to="/" className="link">Home</Link>
+              <Link to="/general" className="link">General</Link>
+              <Link to="/entertainment" className="link">Entertainment</Link>
+              <Link to="/health" className="link">Health</Link>
+              <Link to="/science" className="link">Science</Link>
+              <Link to="/sports" className="link">Sports</Link>
+              <Link to="/technology" className="link">Technology</Link>
+              <Link to="business" className="link">Business</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

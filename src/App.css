@@ -3,10 +3,6 @@
   padding:0
 }
 
-
-
-
-
   @media only screen and (max-width: 900px){
     .res{
       width:100vw;
@@ -17,6 +13,15 @@
       };
     }
 
+    .link{
+      color: #9e9c9c;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.3rem;
+    }
     
+    .link:hover {
+      color: darkturquoise;
+    }
 
   
