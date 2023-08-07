@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
+import { Link } from "react-router-dom";
 
 const NavbarComp = () => {
   return (
@@ -26,15 +27,15 @@ const NavbarComp = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/general">General</Nav.Link>
-              <Nav.Link href="/entertainment">Entertainment</Nav.Link>
-              <Nav.Link href="/health">Health</Nav.Link>
-              <Nav.Link href="/science">Science</Nav.Link>
-              <Nav.Link href="/sports">Sports</Nav.Link>
-              <Nav.Link href="/technology">Technology</Nav.Link>
-              <Nav.Link href="business">Business</Nav.Link>
+            <Nav className="ms-auto d-flex gap-3" color="faded" light>
+              <Link to="/">Home</Link>
+              <Link to="/general">General</Link>
+              <Link to="/entertainment">Entertainment</Link>
+              <Link to="/health">Health</Link>
+              <Link to="/science">Science</Link>
+              <Link to="/sports">Sports</Link>
+              <Link to="/technology">Technology</Link>
+              <Link to="business">Business</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
